@@ -16,6 +16,17 @@
             return unique.join(" ");
         };
 
+        function readAndFilterSource() {
+            let input = document.getElementById("source").value;
+            if (input === "I am fox") {
+                console.log("ddd")
+                $('#foxModal').modal();
+                return
+            };
+            let filteredTags = removeDupsTags(input);
+            document.getElementById("source").value = filteredTags;
+        };
+
         function copyToClipboard(str){
           const el = document.createElement('textarea');
           el.value = str;
@@ -25,18 +36,10 @@
           document.body.removeChild(el);
         };
 
-        function readAndFilter() {
-          let input = document.getElementById("source").value;
-          if (input === "I am fox") {
-              console.log("ddd")
-              $('#foxModal').modal();
-              return
-          };
-          let filteredTags = removeDupsTags(input);
-          document.getElementById("source").value = filteredTags;
-          copyToClipboard(filteredTags);
-        };
-
+        function copySource() {
+          readAndFilterSource();
+          copyToClipboard(document.getElementById("source").value)
+        }
 
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,7 +52,9 @@
         <hr class="my-4">
         <textarea placeholder="Paste your hashtags here..." id="source" rows="4" class="form-control"></textarea>
         <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="readAndFilter()">Filter and Copy</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="readAndFilterSource()">Filter Tags</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="copySource()">Copy</a>
+
     </div>
 
     <div class="modal fade" id="foxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
