@@ -3,6 +3,9 @@
 <html lang="en">
 
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Tag Filtering</title>
@@ -58,13 +61,18 @@
 
 <body>
   <div class="jumbotron">
-    <h1 class="display-4"> Filter Your Duplicate Hashtags </h1>
+    <h1 class="display-4"> Remove Your Duplicate Hashtags </h1>
+    <h6>1. <b>Enter:</b> #coffee #sanfrancisco #coffee #coffee</h6>
+    <h6>2. Press <b>"Filter Tags"</b></h5>
+    <h6>3. <b>Get:</b> #coffee #sanfrancisco</h6>
+    <h6>4. Press <b>"Copy"</b> and then you can paste hashtags without duplicates to your photo</h5>
+
+
     <hr class="my-4">
     <textarea placeholder="Paste your hashtags here..." id="source" rows="4" class="form-control"></textarea>
     <hr class="my-4">
     <a class="btn btn-primary btn-lg" href="#" role="button" onclick="readAndFilterSource()">Filter Tags</a>
     <a class="btn btn-primary btn-lg" href="#" role="button" onclick="copySource()">Copy</a>
-
   </div>
 
   <div class="modal fade" id="foxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
