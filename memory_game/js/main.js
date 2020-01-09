@@ -1,62 +1,96 @@
 let cards = [
     {
-        rank: "queen",
-        suit: "hearts",
-        cardImage: "images/queen-of-hearts.png"
+        rank: "paris",
+        display: false,
+        cardImage: "images/paris.png",
+        id: 1
     },
 
     {
-        rank: "queen",
-        suit: "diamonds",
-        cardImage: "images/queen-of-diamonds.png"
+        rank: "paris",
+        display: false,
+        cardImage: "images/paris.png",
+        id: 2
     },
 
     {
-        rank: "king",
-        suit: "hearts",
-        cardImage: "images/king-of-hearts.png"
+        rank: "london",
+        display: false,
+        cardImage: "images/london.png",
+        id: 3
     },
 
     {
-        rank: "king",
-        suit: "diamonds",
-        cardImage: "images/king-of-diamonds.png"
+        rank: "london",
+        display: false,
+        cardImage: "images/london.png",
+        id: 4
+    },
+
+    {
+        rank: "new_york",
+        display: false,
+        cardImage: "images/new_york.png",
+        id: 5
+    },
+
+    {
+        rank: "new_york",
+        display: false,
+        cardImage: "images/new_york.png",
+        id: 6
     }
 ];
+
+let shuffledCards = shuffle(cards);
 let cardsInPlay = [];
 
-function checkForMatch() {
-    if (cardsInPlay[0] === cardsInPlay[1]) {
-        alert("You found a match!");
-      } else {
-        alert("Sorry, try again.");
-      }
-};
+//Start the game
+function game() {
+    createNewBoard();
+    foundMatches = 0;
+}
 
-function flipCard() {
-    let cardId = this.getAttribute('cardIndex');
-    cardsInPlay.push(cards[cardId].rank);
-
-    this.setAttribute('src', cards[cardId].cardImage);
-    if (cardsInPlay.length === 2) {
-      checkForMatch();
-    };
-};
-
-function createBoard() {
-    for (let i = 0; i < cards.length; i += 1) {
+//Create HTML images
+function createNewBoard() {
+    for (let i = 0; i < shuffledCards.length; i += 1) {
         let cardElement = document.createElement("img");
-        
         cardElement.setAttribute('cardIndex', i);
-        cardElement.className += " cardImage";
-        cardElement.addEventListener('click', flipCard);
+        cardElement.className += "cardImage";
+        cardElement.addEventListener('click', showCard);
         document.getElementById('game-board').appendChild(cardElement);
     };
 
-    resetButtonClicked();
+    resetBoard();
 };
 
-function resetButtonClicked() {
+//Show card face
+function showCard() {
+    let cardId = this.getAttribute('cardIndex');
+    cardsInPlay.push(shuffledCards[cardId]);
+    shuffledCards[cardId].seen = true;
+    this.setAttribute('src', shuffledCards[cardId].cardImage);
+    
+    if (cardsInPlay.length === 2) {
+        checkForMatch();
+    };
+}
+
+//Check if 2 cards match
+function checkForMatch() {
+    if (cardsInPlay[0].id !== cardsInPlay[1].id && 
+        cardsInPlay[0].rank === cardsInPlay[1].rank) {
+            cardsInPlay = [];
+    } else if (cardsInPlay[0].id === cardsInPlay[1].id) {
+        alert("HA! It's the same card! Try again!");
+        resetBoard();
+    } else {
+        setTimeout(function(){ resetBoard(); }, 700);
+    }
+}
+
+//Turn away all cards
+function resetBoard() {
     cardsInPlay = [];
     let allCards = document.querySelectorAll('.cardImage');
     for (let i = 0; i < allCards.length; i += 1) {
@@ -65,5 +99,28 @@ function resetButtonClicked() {
     };
 };
 
-createBoard();
+//Refresh the game and shuffle
+function resetButtonClicked() {
+    resetBoard();
+    shuffledCards = shuffle(cards);
+};
+
+//Shuffle all cards
+function shuffle(array) {
+	var currentIndex = array.length;
+	var temporaryValue, randomIndex;
+
+	while (0 !== currentIndex) {
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	};
+
+	return array;
+};
+
+game();
 
