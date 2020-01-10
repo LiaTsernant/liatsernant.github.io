@@ -110,6 +110,10 @@ footer {
   text-align: center;
 }
 
+.grid {
+  padding: 0 10%;
+}
+
 .message {
   text-align: center;
   font-family: "Raleway", sans-serif;
