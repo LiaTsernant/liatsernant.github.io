@@ -77,7 +77,7 @@ function createGameSize(length) {
 
 let cardsInPlay = [];
 
-//Create HTML images
+//Starts game and creates a board default size = 6
 function createDefaultBoard() {
     createGameSize(6);
 };
@@ -91,7 +91,7 @@ function showCard() {
     if (cardsInPlay.length === 2) {
         checkForMatch();
     };
-}
+};
 
 //Check if 2 cards match
 function checkForMatch() {
@@ -104,7 +104,7 @@ function checkForMatch() {
     } else {
         setTimeout(function () { resetBoard(); }, 700);
     }
-}
+};
 
 //Turn away all cards
 function resetBoard() {
@@ -133,8 +133,8 @@ function resetButtonClicked() {
 
 //Shuffle all cards
 function shuffle(array) {
-    var currentIndex = array.length;
-    var temporaryValue, randomIndex;
+    let currentIndex = array.length;
+    let temporaryValue, randomIndex;
 
     while (0 !== currentIndex) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -148,26 +148,25 @@ function shuffle(array) {
     return array;
 };
 
-
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function showDropDown() {
     document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
+};
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  } 
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            };
+        };
+    };
+};
 
 createDefaultBoard();
 
