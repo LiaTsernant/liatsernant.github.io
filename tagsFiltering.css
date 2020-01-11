@@ -11,14 +11,14 @@ body {
 header {
     background-color: #698474;
     margin: 0;
-    padding: 50px;
+    padding: 30px;
     text-align: left;
     background: linear-gradient(135deg, #698474 60%, #889e81 60%);
 }
 
 hr {
     color: #bac7a7;
-    margin: 20px;
+    margin: 10px;
 }
 
 h2 {
@@ -45,6 +45,8 @@ p {
     color: #1f2a24;
     font-family: 'Poiret One', cursive;
     font-weight: 500;
+    margin: 10px;
+    font-size: 20px;
 }
 
 .tutorial {
@@ -53,18 +55,19 @@ p {
 }
 
 .instructions {
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 .button {
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 20px auto;
+
 }
 
 button {
     font-family: 'Poiret One', cursive;
-    margin: 0px 20px;
+    margin: 0 20px;
     font-size: 25px;
     padding: 5px;
     border-radius: 5px;
@@ -89,12 +92,11 @@ button:hover {
     margin: 0 auto;
 }
 
-
 footer {
-    position: absolute;
+    position: fixed;
+    right: 0;
     bottom: 0;
-    padding: 5px 0;
-    width: 100%;
+    left: 0;
     background-color: #698474;
     color: white;
     text-align: center;
