@@ -99,7 +99,7 @@ function checkForMatch() {
         cardsInPlay[0].rank === cardsInPlay[1].rank) {
         cardsInPlay = [];
     } else if (cardsInPlay[0].id === cardsInPlay[1].id) {
-        alert("HA! It's the same card! Try again!");
+        alert("Ha-ha! It's the same card! Try again!");
         resetBoard();
     } else {
         setTimeout(function () { resetBoard(); }, 700);
