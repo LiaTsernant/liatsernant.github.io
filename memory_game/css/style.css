@@ -127,7 +127,7 @@ footer {
 .dropbtn:hover, .dropbtn:focus, a:hover, a:focus {
   background-color: #0D2C40;
   border-bottom: 2px solid white;
-  padding: 5px 0;
+  padding: 5px;
   border-radius: 5px;
 }
 
