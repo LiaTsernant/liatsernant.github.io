@@ -1,0 +1,161 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #eeede1;
+    margin: 0;
+}
+
+header {
+    background-color: #698474;
+    margin: 0;
+    padding: 50px;
+    text-align: left;
+    background: linear-gradient(135deg, #698474 60%, #889e81 60%);
+}
+
+hr {
+    color: #bac7a7;
+    margin: 20px;
+}
+
+h2 {
+    background-color: #bac7a7;
+    margin: 0;
+    color: #232c27;
+    padding: 20px;
+    font-family: 'Poiret One', cursive;
+}
+
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-weight: 50;
+    color: #eeede1;
+    margin: 0;
+    font-size: 40px;
+}
+
+h6, h5 {
+    font-family: 'Poiret One', cursive;
+}
+
+p {
+    color: #1f2a24;
+    font-family: 'Poiret One', cursive;
+    font-weight: 500;
+}
+
+.tutorial {
+    text-align: left;
+    padding: 0;
+}
+
+.instructions {
+    padding: 0 20px;
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+button {
+    font-family: 'Poiret One', cursive;
+    margin: 0px 20px;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #698474;
+    color: white;
+}
+
+.form-control {
+    font-family: 'Poiret One', cursive;
+    font-weight: 900;
+    width: 99%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    margin: 0 auto;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #698474;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poiret One', cursive;
+}
+
+/*  */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
