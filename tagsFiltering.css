@@ -61,16 +61,17 @@ p {
 .button {
     width: 100%;
     text-align: center;
-    margin: 20px auto;
-
+    margin: 40px auto;
+    bottom: 10px;
 }
 
 button {
     font-family: 'Poiret One', cursive;
-    margin: 0 20px;
-    font-size: 25px;
+    /* margin: 0 20px; */
+    font-size: 20px;
     padding: 5px;
     border-radius: 5px;
+    border: 1px solid#698474;
 }
 
 button:hover {
