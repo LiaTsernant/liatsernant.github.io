@@ -58,7 +58,7 @@ a {
 
 header {
   background-color: #0D2C40;
-  padding: 20px 0;
+  padding: 10px 0;
   width:100%;
   height: auto;
 }
@@ -115,6 +115,12 @@ footer {
 .name {
   color: #F15B31;
   font-weight: bold;
+}
+
+#logo {
+  width: 60px;
+  height: auto;
+  margin: 5px;
 }
 
 .dropbtn {
