@@ -1,0 +1,138 @@
+:root {
+    --rotate: 0deg;
+    --paw-color: black;
+}
+
+html {
+    /* To make use of full height of page*/
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+body {
+    min-height: 100vh;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url(images/watercolour-1325656_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(rgb(0, 139, 151), #0f998d);
+    padding: 10px 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+span {
+    color: white;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-content {
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-width: 200px;
+    min-height: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Modak', cursive;
+    font-size: 100px;
+    color: #0f9976;
+}
+
+#name {
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    color: white;
+}
+
+#field-svg {
+    width: 100%;
+}
+
+#paw{
+    transform: rotate(var(--rotate)) matrix(7, 0, 0 ,7, -2900, -3300);
+    fill: var(--paw-color);
+}
+
+#paw-stage {
+    -webkit-filter: drop-shadow(100px 100px 50px rgba(0,0,0,0.5));      
+    filter: drop-shadow(90px 90px 200px rgba(0,0,0,0.5));
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(0, 139, 151), #0f998d);
+    color: white;
+}
+
+hr {
+    width: 20%;
+    color: rgb(0, 139, 151);
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    background: #0f9976;
+    padding: 20px;
+    border-radius: 50px;
+    border: 1 px solid white;
+    transition: all 0.4s ease 0s;
+    position: relative;
+    margin: 10px;
+}
+
+button:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+};
+
+/* #paw {
+    width: 50000px;
+    height: 5000px;
+} */
+
+
