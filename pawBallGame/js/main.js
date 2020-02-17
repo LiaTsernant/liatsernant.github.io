@@ -1,34 +1,18 @@
-// colors of the game
 let colors = ['gold', '#004219', '#ff5e00'];
-// field for clicking and shooting balls
 let activeGameField = document.getElementById('paw-div');
-// paw
 let paw = document.getElementById('paw');
-// start button
 let startButton = document.getElementById("start");
-// reset the game
 let resetButton = document.getElementById("reset");
-// spiral path
 let svgPath = document.getElementById("motionPath");
-// stop creating a ball
 let skipABall = false;
-// chain of balls
 let chainBallsField = document.getElementById('balls');
-// id of the balls
 let nextBallId = 0;
-// field for the conclusion of the game
 let endGameField = document.getElementById("end-game");
-// picking a random color for a paw/bullet/balls
 let randColor = colors[Math.floor(Math.random() * colors.length)];
-// setting a random color to a global variable for a paw
 document.documentElement.style.setProperty(`--paw-color`, `${randColor}`);
-// saving last shot time to stop frequent bullet shooting 
 let lastShotTime = 0;
-// interval for creating or skipping the ball
 let interval = null;
-// shows if game is going
 let isGameGoing = false;
-// background music
 let audio = document.getElementById("audio");
 
 //----------------------------------------------------------------------
@@ -146,15 +130,15 @@ function shootBallOnClick(e) {
         return;
     };
     lastShotTime = new Date().getTime();
+
     let relX = getRelativeCoordinates(e.clientX, e.clientY).x;
     let relY = getRelativeCoordinates(e.clientX, e.clientY).y;
+
     let ballsToPutInFreezer = getBallsInTailToFreeze({ 'x': relX, 'y': relY });
     let firstPaused = ballsToPutInFreezer[0];
     let firstPausedElapsedAnimateTime = getElapsedAnimateTime(firstPaused);
     let nextBallElapsedAnimateTime = firstPausedElapsedAnimateTime + 1000;
-
     let dur = parseInt(firstPaused.getAttribute('ballTotalTravelDuration'));
-
     let nextBallPathLength = svgPath.getTotalLength() * nextBallElapsedAnimateTime / dur;
 
     skipABall = true;
@@ -168,24 +152,22 @@ function shootBallOnClick(e) {
     let animateAttributesX = {
         attributeName: 'cx',
         from: '-5300',
-        to: `${svgPath.getPointAtLength(svgPath.getTotalLength() - nextBallPathLength).x}`,
+        to: `${svgPath.getPointAtLength(nextBallPathLength).x}`,
         dur: '1s',
         fill: 'freeze',
     };
     let animateAttributesY = {
         attributeName: 'cy',
         from: '3300',
-        to: `${svgPath.getPointAtLength(svgPath.getTotalLength() - nextBallPathLength).y}`,
+        to: `${svgPath.getPointAtLength(nextBallPathLength).y}`,
         dur: '1s',
         fill: 'freeze',
     };
-
     let animateX = document.createElementNS("http://www.w3.org/2000/svg", 'animate');
     let animateY = document.createElementNS("http://www.w3.org/2000/svg", 'animate');
     for (let key in animateAttributesX) {
         animateX.setAttribute(key, animateAttributesX[key])
     };
-
     bullet.appendChild(animateX);
     animateX.beginElement();
     for (let key in animateAttributesY) {
@@ -197,14 +179,13 @@ function shootBallOnClick(e) {
 
     setTimeout(function () {
         bullet.parentNode.removeChild(bullet);
-
         let ball = allocateBall(200, randomBulletColor, firstPaused.getAttribute("ballTotalTravelDuration"), lastShotTime + dur - firstPausedElapsedAnimateTime);
         chainBallsField.appendChild(ball);
 
         let animateMotion = document.createElementNS("http://www.w3.org/2000/svg", 'animateMotion');
         animateMotion.setAttributeNS("http://www.w3.org/1999/xlink", "href", `#${ball.getAttribute('id')}`);
         animateMotion.setAttribute("dur", `${(dur - nextBallElapsedAnimateTime) / 1000}s`);
-        animateMotion.setAttribute("keyPoints", `${1 - nextBallElapsedAnimateTime / dur};0`);
+        animateMotion.setAttribute("keyPoints", `${nextBallElapsedAnimateTime / dur};1`);
         animateMotion.setAttribute("keyTimes", `0;1`);
         animateMotion.setAttribute("fill", "freeze");
         ball.appendChild(animateMotion);
@@ -248,10 +229,10 @@ function destroyNeighboursColors(ball) {
     let deletedBallsCounter = rightIdx - leftIdx;
 
     if (deletedBallsCounter >= 2) {
-        for (let idx = leftIdx; idx <= rightIdx; idx++) {
+        for (let idx = leftIdx; idx <= rightIdx; idx += 1) {
             chainBallsField.removeChild(timeSortedBalls[idx]);
         };
-        return deletedBallsCounter + 1
+        return deletedBallsCounter + 1;
     };
 
     return 0;
@@ -271,17 +252,14 @@ function pauseBall(ball, durationSec) {
 
     let freezeDurationMS = durationSec * 1000; 
     if (ball.getAttribute("frozen") === null) {
-        ball.setAttribute('cy', `${svgPath.getPointAtLength(svgPath.getTotalLength() - currentPathLength).y}`);
-        ball.setAttribute('cx', `${svgPath.getPointAtLength(svgPath.getTotalLength() - currentPathLength).x}`);
+        ball.setAttribute('cy', `${svgPath.getPointAtLength(currentPathLength).y}`);
+        ball.setAttribute('cx', `${svgPath.getPointAtLength(currentPathLength).x}`);
         ball.setAttribute("frozen", true);
     } else {
         freezeDurationMS += parseInt(ball.getAttribute("freezeUntil")) - new Date().getTime();
     }
     let freezeUntil = new Date().getTime() + freezeDurationMS;
     ball.setAttribute("freezeUntil", freezeUntil)
-
-
-
 
     setTimeout(function () {
         if (ball.parentNode === null || freezeUntil !== parseInt(ball.getAttribute('freezeUntil'))) {
@@ -294,10 +272,11 @@ function pauseBall(ball, durationSec) {
         let animateMotion = document.createElementNS("http://www.w3.org/2000/svg", 'animateMotion');
         animateMotion.setAttributeNS("http://www.w3.org/1999/xlink", "href", `#${ball.getAttribute('id')}`);
         animateMotion.setAttribute("dur", `${(dur - elapsedAnimateTime) / 1000}s`);
-        animateMotion.setAttribute("keyPoints", `${1 - elapsedAnimateTime / dur};0`);
+        animateMotion.setAttribute("keyPoints", `${elapsedAnimateTime / dur};1`);
         animateMotion.setAttribute("keyTimes", `0;1`);
         animateMotion.setAttribute("fill", "freeze");
         ball.appendChild(animateMotion);
+
         let mpath = document.createElementNS("http://www.w3.org/2000/svg", 'mpath');
         mpath.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#motionPath");
         animateMotion.appendChild(mpath);
@@ -328,15 +307,12 @@ function produceBall() {
     let animateMotion = document.createElementNS("http://www.w3.org/2000/svg", 'animateMotion');
     animateMotion.setAttributeNS("http://www.w3.org/1999/xlink", "href", `#${ball.getAttribute("id")}`);
     animateMotion.setAttribute("dur", `${ballTravelDurationSec}s`);
-    animateMotion.setAttribute("keyPoints", "1;0");
-    animateMotion.setAttribute("keyTimes", "0;1");
     animateMotion.setAttribute("fill", "freeze");
-    ball.appendChild(animateMotion);
     let mpath = document.createElementNS("http://www.w3.org/2000/svg", 'mpath');
     mpath.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#motionPath");
     animateMotion.appendChild(mpath);
+    ball.appendChild(animateMotion);
     animateMotion.beginElement();
-
     registerGameLostCondition(ball,
         new Date().getTime() + (ballTravelDurationSec * 1000));
 };
@@ -428,5 +404,3 @@ function getBallsInTailToFreeze(k) {
 function getDirectionAngle(x, y) {
     return -Math.atan2(x, y) + Math.PI;
 };
-
-//--------------------------------------------------------------------------------------

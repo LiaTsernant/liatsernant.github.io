@@ -50,13 +50,18 @@ For my implementation it means that the path cannot be curved.
 
 
 ## Next Features:
+* Make the game stable for using in different browsers.  
+**Upd (Feb 16)**: Chrome will not fix bugs with animateMotion.
+https://bugs.chromium.org/p/chromium/issues/detail?id=353108  
+even though statistic says Chrome supports SMIL animation
+https://caniuse.com/#feat=svg-smil
+
 * Make the game small-screen friendly.
-* Make the game stable for using in different browsers.
 * Fix graphic problems when user shoot the place of just deleted ball.
 
 
 ## Requirements and Link
-**Firefox**  
+**Firefox** (Chrome did not fix bugs with SVG animation)  
 Game: https://liatsernant.github.io/pawBallGame/
 
 #
