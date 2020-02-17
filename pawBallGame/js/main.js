@@ -19,15 +19,20 @@ let audio = document.getElementById("audio");
 
 startButton.addEventListener("click", startGame);
 
-function startGame() {
-    playMusic()
-    endGameField.textContent = "LET'S PLAY!";
 
-    isGameGoing = true;
-    if (interval !== null) {
-        return;
-    }
-    startBallProduction(20);
+function startGame() {
+    if (navigator.userAgent.indexOf("Firefox") !== -1){
+        playMusic()
+        endGameField.textContent = "LET'S PLAY!";
+
+        isGameGoing = true;
+        if (interval !== null) {
+            return;
+        }
+        startBallProduction(20);
+    } else {
+        alert("Only Firefox is supported. Please, install Mozilla Firefox");
+    };
 };
 
 function startBallProduction(durationSec) {
