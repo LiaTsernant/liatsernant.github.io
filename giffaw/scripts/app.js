@@ -12,7 +12,7 @@ setupQueryValue();
 
 $.ajax({
     method: 'GET',
-    url: 'http://api.giphy.com/v1/gifs/search',
+    url: 'https://api.giphy.com/v1/gifs/search',
     data: $('form').serialize(),
     success: onSuccess,
     error: onError
