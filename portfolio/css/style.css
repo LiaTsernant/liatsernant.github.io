@@ -1,0 +1,82 @@
+body, html {
+  width: 100%
+}
+
+h2 {
+  top: 10px;
+  margin: 20px;
+  font-size: 40px;
+}
+
+#nav, #about, #projects, #resume, #blog, #contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#nav {
+  background-color: #96ceb4;
+
+}
+
+#about {
+  background-color: #ffeead;
+}
+
+#projects {
+  background-color: #ff6f69;
+}
+
+#resume {
+  background-color: #ffcc5c;
+}
+
+#blog {
+  background-color: #ffeead;
+}
+
+#contact {
+  background-color: #96ceb4;
+}
+
+a {
+  color: black
+}
+
+p {
+  padding: 40px;
+}
+
+li {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#profile {
+  max-width: 400px;
+  max-height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#content {
+  height: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
