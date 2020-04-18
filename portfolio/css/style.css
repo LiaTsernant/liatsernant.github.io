@@ -8,8 +8,8 @@ nav {
 }
 
 h2 {
-  margin-top: 10px;
-  margin: 20px;
+  /* margin-top: 10px; */
+  padding: 20px;
   font-size: 40px;
 }
 
@@ -33,6 +33,8 @@ h3 {
 }
 
 #about {
+  display: flex;
+  flex-direction: column;
   height: 700px;
   /* background-color: #8b9dc3; */
   background-color: white;
@@ -137,6 +139,6 @@ textarea {
 }
 
 #my-essay {
-  padding: 100px;
+  padding: 20px 100px;
 }
 
