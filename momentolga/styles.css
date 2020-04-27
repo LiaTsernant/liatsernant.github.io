@@ -17,22 +17,6 @@ nav {
   font-weight: 600;
 }
 
-#nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#nav-links a {
-  margin: 0 5px;
-  color: black;
-  text-decoration: none;
-}
-
-#nav-links a:hover {
-  margin: 0 5px;
-  color: rgb(133, 133, 133);
-}
 
 main {
   width: 100%;
@@ -42,5 +26,13 @@ main {
 }
 
 .navbar-brand {
-  font-size: 40px;
+  font-size: 30px;
+}
+
+#navigation {
+  color:rgb(105, 105, 105);
+}
+
+#navigation:hover {
+  color: black;
 }
