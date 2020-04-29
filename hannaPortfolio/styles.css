@@ -12,6 +12,10 @@ h6 {
   color: black;
 }
 
+p {
+  font-size: 18px;
+}
+
 nav {
   margin-bottom: 20px;
   width: 100%;
@@ -19,6 +23,12 @@ nav {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  font-size: 25px;
+}
+
+hr {
+  background-color: #fff; 
+  border-top: 5px dotted #8c8b8b; 
 }
 
 #navigation {
@@ -26,7 +36,8 @@ nav {
 }
 
 #navigation:hover, #author {
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
+  color: rgb(185, 185, 185);
 }
 
 main {
@@ -43,13 +54,13 @@ footer {
   margin-bottom: 10px;
 }
 
-
 /* ID's */
 
 #main-photo {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  opacity: 0.8;
 }
 
 #photo-about {
@@ -70,7 +81,13 @@ footer {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  opacity: 0.8;
 }
+
+.card-img-top:hover {
+  opacity: 1;
+}
+
 
 .blockquote p, .blockquote-footer{
   font-size: 20px;
@@ -88,4 +105,21 @@ footer {
 
 .fa {
   font-size: 50px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+#icons {
+  display: flex;
+  flex-direction: row;
+}
+
+#icons i {
+  margin: 20px;
 }
