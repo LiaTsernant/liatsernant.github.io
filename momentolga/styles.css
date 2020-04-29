@@ -10,6 +10,15 @@ h1 {
   font-size: 40px;
 }
 
+h3 {
+  color: rgb(255, 153, 153);
+}
+
+h6 {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
 nav {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.6);
@@ -43,6 +52,12 @@ main {
 
 footer {
   flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 #category {
@@ -61,13 +76,13 @@ footer {
   padding: 20px 20px;
 }
 
-#media {
+/* #media {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 #logos {
   display: flex;
   justify-content: center;
