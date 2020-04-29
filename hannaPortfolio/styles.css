@@ -3,22 +3,23 @@ body, html {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h6 {
   font-size: 15px;
   margin-top: 20px;
+  color: black;
 }
 
 nav {
+  margin-bottom: 20px;
   width: 100%;
-  background-color: rgba(130, 138, 251, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
 }
-
 
 #navigation {
   color:rgb(105, 105, 105);
@@ -40,4 +41,51 @@ footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+}
+
+
+/* ID's */
+
+#main-photo {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+#photo-about {
+  width: 100%;
+  object-fit: cover;
+}
+
+#about {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(173, 173, 173, 0.2); 
+  padding: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blockquote p, .blockquote-footer{
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.fa {
+  font-size: 50px;
 }

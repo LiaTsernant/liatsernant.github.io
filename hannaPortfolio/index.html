@@ -16,9 +16,11 @@
   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momentolga</title>
+  <title>Hanna</title>
 </head>
 
 <body>
@@ -28,16 +30,16 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 d-flex align-items-center justify-content-center">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav d-flex align-items-center justify-content-center">
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="navigation">About</span></a>
+            <a class="nav-link" href="#about" id="navigation">About</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="navigation">Photo <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#photo" id="navigation">Photo <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="navigation">Video <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#video" id="navigation">Video <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#" id="navigation">Contact <span class="sr-only">(current)</span></a>
@@ -48,6 +50,95 @@
   </header>
 
   <main>
+    <div class="container">
+      <div class="row">
+        <img id="main-photo" src="media/IMG_6803.JPG" alt="Hanna's photo">
+      </div>
+
+      <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div>
+          <h1>About</h1>
+        </div>        
+      </div>
+
+      <div class="row mt-3" id="about">
+        <div class="col-sm-4">
+          <div class="card">
+            <img id="photo-about" src="media/profile.jpg" alt="Hanna's photo">
+          </div>
+        </div>
+      
+        <div class="col-sm-8">
+          <div>
+            <p>
+              Violinist Anna Gribkova started violin studies at the age of 5 at Minsk Academy in her native Belarus. <br><br>
+              She continued her studies at the Special School of Music affiliated with the St. Petersburg Conservatory in the
+              class of Prof. Savely
+              Shalman.<br>
+              Following her concert debut in Italy in 2009, Ms. Gribkova has performed in recitals and as a soloist with
+              orchestra at numerous venues in Belarus, Russia, Europe and the United States. In 2014 Anna had been awarded a
+              scholarship from the Glazunov foundation, and in 2015 she had won a scholarship to participate at the summer
+              academy in
+              Murren, Switzerland and was also admitted at the Rimsky-Korsakov Conservatory of Music in St. Petersburg.
+              <br><br>
+              Currently, Ms.
+              Gribkova is a Woodruff scholar at the Schwob School of Music studying with Prof. Sergiu Schwartz, the William B.
+              and Sue
+              Marie Turner Distinguished Chair in Violin. Anna performed with the Schwob Philharmonic Orchestra as a winner of
+              2017-18
+              CSU/Schwob Conservatory of music Concerto Competition at River Center of the Performing Arts. She has also
+              appeared as a
+              winner of Atlanta Music Club competition and Samuel Fordis Young Artist Concerto competition. <br>
+              This year she will appear
+              with the Schwob Philharmonic as a winner of the 2019-20 Concerto competition.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-5 mb-5">
+        <h1>Photo</h1>
+      </div>
+
+      <div class="card-group mt-3" id="photo">
+        <div class="card">
+          <img src="media/IMG_2738.jpeg" class="card-img-top" alt="...">
+        </div>
+
+        <!-- <div class="card">
+          <img src="media/IMG_6804.JPG" class="card-img-top" alt="...">
+        </div> -->
+
+        <div class="card">
+          <img src="media/IMG_6805.JPG" class="card-img-top" alt="...">
+        </div>
+
+        <div class="card">
+          <img src="media/IMG_6803.JPG" class="card-img-top" alt="...">
+        </div>
+      </div>
+
+      <div class="card-body d-flex justify-content-center mt-5 quote">
+        <i class="fa fa-quote-right mt-3 mb-3" aria-hidden="true"></i>
+        <blockquote class="blockquote mb-0">
+          <p>Anna is a world class young artist. <br> 
+            She has a beautiful sound, full of color and temperament suited to the vernacular of
+          composers.</p>
+          <footer class="blockquote-footer">Paul Hostetter</footer>
+        </blockquote>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div id="video">
+          <h1>Video</h1>
+        </div>
+      </div>
+
+      <div class="card mb-5">
+        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/XAZoXXL1S80" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   </main>
 
   <footer id="media">
