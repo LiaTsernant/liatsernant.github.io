@@ -18,7 +18,7 @@ nav {
 }
 
 .navbar-brand {
-  max-width: 400px;
+  max-width: 300px;
 }
 
 @media screen and (max-width: 600px) {
@@ -48,7 +48,7 @@ nav {
 
 .jumbotron {
   background-color:rgba(255, 153, 153, 0.2);
-  padding: 50px 20px;
+  padding: 20px 20px;
 }
 
 #media {
