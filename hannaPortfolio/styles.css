@@ -16,6 +16,10 @@ p {
   font-size: 18px;
 }
 
+a {
+  color: black;
+}
+
 nav {
   margin-bottom: 20px;
   width: 100%;
@@ -138,4 +142,8 @@ footer {
 
 #icons i {
   margin: 20px;
+}
+
+#icons i:hover {
+  color: rgb(185, 185, 185);
 }
