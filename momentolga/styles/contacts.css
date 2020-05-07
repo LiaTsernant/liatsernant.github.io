@@ -1,0 +1,15 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+#profile {
+  max-height: 500px;
+  object-fit: cover;
+  object-position: 70% 150%
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
