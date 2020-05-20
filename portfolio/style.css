@@ -1,37 +1,11 @@
 body, html {
   width: 100%;
   height: 100%;
-  font-family: 'Baloo Paaji 2', cursive;;
+  font-family: monospace;
 }
 
 h1 {
   font-size: 40px;
-  margin-bottom: 20px;
-}
-
-h5 {
-  margin-bottom: 30px;
-}
-
-nav {
-  background: #3b5998;
-}
-
-nav a {
-  color: white;
-}
-
-a:hover {
-  color: #b4c5e9;
-}
-
-h3 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-#content {
-  margin: 10px;
 }
 
 img {
@@ -40,69 +14,17 @@ img {
   object-fit: cover;
 }
 
-#about {
-  height: auto;
-  background-color: white;
-}
-
-#resume {
-  background-color: #f7f7f7;
-}
-
-#projects {
-  /* background-color: #dfe3ee; */
-  padding-right: 0;
-}
-
-#contact {
-  height: 400px;
-  background-color: #3b5998;
-}
-
-#contact h2 {
-  color: white;
-}
-
-#contact-form {
-  max-width: 800px;
-}
-
-.row {
-  margin: 0;
-  padding: 0;
-}
-
-#block {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
 #logos {
-  background-color: rgba(255,255,255, 0.8);
-  border-radius: 30px;
-  height: auto;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 30px;
 }
 
 #logos > img {
   max-width: 80px;
   height: 80px;
   margin: 10px;
-  object-fit: contain;
-}
-
-.card-body {
-  background-color: rgb(228, 228, 228);
-}
-
-#yulia {
-  max-width: 250px;
-  height: auto;
   object-fit: contain;
 }
