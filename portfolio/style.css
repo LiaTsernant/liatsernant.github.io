@@ -5,7 +5,7 @@ body, html {
 }
 
 nav {
-  background-color: white;
+  background-color: rgb(228, 228, 228);
 }
 
 .navbar-brand {
@@ -78,6 +78,15 @@ img {
 
 .card-img-top {
     border-radius: 20px 20px 0 0 ;
+}
+
+i {
+  color: rgb(71, 71, 71);
+}
+
+i:hover {
+    color: rgb(149, 149, 149);
+
 }
 
 @media screen and (max-width: 600px) {
