@@ -13,55 +13,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-   background: rgb(95,214,250);
-background: -moz-radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 65%);
-background: -webkit-radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 65%);
-background: radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 65%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#5a145d",GradientType=1); 
+  background: rgb(95,214,250);
+  background: -moz-radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 65%);
+  background: -webkit-radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 65%);
+  background: radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 65%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#5a145d", GradientType=1); 
   overflow: hidden;
 }
 
+#particles-js-red,
+#particles-js-green,
+#particles-js-blue,
+#particles-js-yellow, 
+#particles-js-orange,
+#particles-js-purple,
 .cover {
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+.cover {
   background-color: rgba(255, 255, 255, 0.03);
-}
-
-#particles-js-red {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-#particles-js-green {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-#particles-js-blue {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-#particles-js-yellow {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-#particles-js-orange {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-#particles-js-purple {
-  width: 100%;
-  height: 100%;
-  position: absolute;
 }
 
 h1 {
