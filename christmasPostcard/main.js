@@ -2,7 +2,7 @@ function loadParticles(elIdx, color) {
   particlesJS(`${elIdx}`, {
     "particles": {
       "number": {
-        "value": 15,
+        "value": 30,
         "density": {
           "enable": true,
           "value_area": 789
@@ -25,7 +25,7 @@ function loadParticles(elIdx, color) {
         }
       },
       "size": {
-        "value": 10,
+        "value": 8,
         "random": true,
         "anim": {
           "enable": true,
@@ -38,9 +38,9 @@ function loadParticles(elIdx, color) {
         "enable": false,
       },
       "move": {
-        "enable": false,
-        "speed": 0.9,
-        "direction": "none",
+        "enable": true,
+        "speed": 2,
+        "direction": "bottom",
         "random": true,
         "straight": false,
         "out_mode": "out",
@@ -54,23 +54,58 @@ function loadParticles(elIdx, color) {
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": true,
+          "enable": false,
           "mode": "bubble"
         },
         "onclick": {
           "enable": false,
         },
-        "resize": true
+        "resize": false
       },
     },
     "retina_detect": true
   });
 }
 
-loadParticles('particles-js-red','ff5650');
-loadParticles('particles-js-blue', '509cff');
-loadParticles('particles-js-green', '50ff85');
-loadParticles('particles-js-yellow', 'f3ff50');
-loadParticles('particles-js-orange', 'ff9050');
-loadParticles('particles-js-purple', 'dc50ff');
+loadParticles('particles-js-blue', 'd5faff');
+loadParticles('particles-js-white', 'fff');
+
+
+
+function draw() {
+  let pathArr = document.querySelectorAll('#anaplan path');
+
+  for (let i = 0; i < pathArr.length - 3; i += 1) {
+    setLineStyle(pathArr[i], i);
+  }
+
+  for (let i = pathArr.length - 3; i < pathArr.length; i += 1) {
+    pathArr[i].style.animation = 'fill-line 2s ease-in forwards 2s';
+    pathArr[i].style.animationDelay = '4s'
+  }
+
+  setTimeout(() => {
+    drawLines();
+  }, 5000)
+}
+
+function drawLines() {
+  let lines = document.querySelectorAll('#lines path');
+  for (let i = 0; i < lines.length; i += 1) {
+    setDecorationLinesStyle(lines[i], i)
+  }
+
+}
+
+function setLineStyle(element, i) {
+  setTimeout(() => {
+    element.style.stroke = '#fff';
+    element.style.strokeWidth = '2px';
+    element.style.strokeDasharray = element.getTotalLength() + 'px';
+    element.style.strokeDashoffset = element.getTotalLength() + 'px';
+    element.style.animation = 'line-animation 2s linear forwards 2s';
+  }, 200 * i);
+}
+
+draw();
 
