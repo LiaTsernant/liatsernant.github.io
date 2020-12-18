@@ -1,54 +1,73 @@
 function loadParticles(elIdx, color) {
   particlesJS(`${elIdx}`, {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 789
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          value_area: 800
         }
       },
-      "color": {
-        "value": `${color}`,
+      color: {
+        value: '#fff'
       },
-      "shape": {
-        "type": "circle",
-      },
-      "opacity": {
-        "value": 0.8,
-        "random": false,
-        "anim": {
-          "enable": true,
-          "speed": 1,
-          "opacity_min": 0,
-          "sync": false
+      shape: {
+        type: 'polygon',
+        stroke: {
+          width: 0,
+          color: '#ff0000'
+        },
+        polygon: {
+          nb_sides: 6
+        },
+        image: {
+          src: '',
+          width: 100,
+          height: 100
         }
       },
-      "size": {
-        "value": 8,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 2,
-          "size_min": 0,
-          "sync": false
+      opacity: {
+        value: 0.7,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 2,
+          opacity_min: 0,
+          sync: false
         }
       },
-      "line_linked": {
-        "enable": false,
-      },
-      "move": {
-        "enable": true,
-        "speed": 2,
-        "direction": "bottom",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
+      size: {
+        value: 5,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 2,
+          size_min: 0,
+          sync: false
         }
-      }
+      },
+      line_linked: {
+        enable: false,
+        distance: 100,
+        color: '#fff',
+        opacity: 1,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: 'bottom',
+        random: true,
+        straight: false,
+        out_mode: 'out',
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 3000,
+          rotateY: 3000
+        }
+      },
+      array: []
     },
     "interactivity": {
       "detect_on": "canvas",
