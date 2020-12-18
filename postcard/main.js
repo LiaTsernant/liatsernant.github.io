@@ -99,7 +99,7 @@ function drawLines() {
 
 function setLineStyle(element, i) {
   setTimeout(() => {
-    element.style.stroke = '#fff';
+    element.style.stroke = '#20254B';
     element.style.strokeWidth = '2px';
     element.style.strokeDasharray = element.getTotalLength() + 'px';
     element.style.strokeDashoffset = element.getTotalLength() + 'px';
