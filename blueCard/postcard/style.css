@@ -32,9 +32,10 @@ body {
 
 
   background: rgb(95,214,250);
-  background: -moz-radial-gradient(circle, #6654dd 0%,#0b2265 80%);
-  background: -webkit-radial-gradient(circle, #6654dd 0%,#0b2265 80%);
-  background: radial-gradient(circle, #6654dd 0%,#0b2265 80%);
+  background: #0b2265;
+  background: -moz-radial-gradient(circle, #a4b4fa 0%,#0b2265 80%);
+  background: -webkit-radial-gradient(circle, #a4b4fa 0%,#0b2265 80%);
+  background: radial-gradient(circle, #a4b4fa 0%,#0b2265 80%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#0b2265", GradientType=1); 
 
 
