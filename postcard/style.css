@@ -24,22 +24,22 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* background: rgb(95,214,250);
-  background: -moz-radial-gradient(circle, rgba(95,214,250,1) 0%, #0b2265 73%);
+  background: rgb(95, 214, 250);
+  background: -moz-radial-gradient(circle, rgba(95,214,250,1) 0%, #5a145d 73%);
   background: -webkit-radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 73%);
   background: radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 73%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#0b2265", GradientType=1);  */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#0b2265", GradientType=1); 
 
 
-  background: rgb(95,214,250);
+  /* background: rgb(95,214,250);
   background: #0b2265;
   background: -moz-radial-gradient(circle, #a4b4fa 0%,#0b2265 80%);
   background: -webkit-radial-gradient(circle, #a4b4fa 0%,#0b2265 80%);
   background: radial-gradient(circle, #a4b4fa 0%,#0b2265 80%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#0b2265", GradientType=1); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#0b2265", GradientType=1);  */
 
-
-   /* background: rgb(121,177,212);
+/* 
+   background: rgb(121,177,212);
 background: -moz-radial-gradient(circle, #79b1d4 10%, #4b0b65 75%);
 background: -webkit-radial-gradient(circle, rgba(121,177,212,1) 10%, #4b0b65 75%);
 background: radial-gradient(circle, rgba(121,177,212,1) 10%, #4b0b65 75%);
@@ -154,12 +154,12 @@ ellipse {
 
 #left-top-snowflake .snowflake-path,
 #left-top-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #left-top-snowflake .snowflake-medium-path,
 #left-top-snowflake .snowflake-small-path {
-  stroke: #0b2265;
+  stroke: #5a145d;
 }
 
 /* TOP LEFT MIDDLE */
@@ -173,12 +173,12 @@ ellipse {
 
 #top-left-middle-snowflake .snowflake-path,
 #top-left-middle-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #top-left-middle-snowflake .snowflake-medium-path,
 #top-left-middle-snowflake .snowflake-small-path {
-  stroke: rgb(90, 20, 93);
+  stroke: #5a145d;
 }
 
 /* TOP MIDDLE */
@@ -190,12 +190,12 @@ ellipse {
 
 #top-middle-snowflake .snowflake-path,
 #top-middle-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #top-middle-snowflake .snowflake-medium-path,
 #top-middle-snowflake .snowflake-small-path {
-  stroke: rgb(90, 20, 93);
+  stroke: #5a145d;
 }
 
 /* TOP RIGHT MIDDLE */
@@ -209,12 +209,12 @@ ellipse {
 
 #top-right-middle-snowflake .snowflake-path,
 #top-right-middle-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #top-right-middle-snowflake .snowflake-medium-path,
 #top-right-middle-snowflake .snowflake-small-path {
-  stroke: rgb(90, 20, 93); 
+  stroke: #5a145d; 
 }
 
 /* TOP RIGHT */
@@ -228,12 +228,12 @@ ellipse {
 
 #right-top-snowflake .snowflake-path,
 #right-top-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #right-top-snowflake .snowflake-medium-path,
 #right-top-snowflake .snowflake-small-path {
-  stroke: #0b2265;
+  stroke: #5a145d;
 }
 
 /* RIGHT MIDDLE */
@@ -247,12 +247,12 @@ ellipse {
 
 #right-middle-snowflake .snowflake-path,
 #right-middle-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #right-middle-snowflake .snowflake-medium-path,
 #right-middle-snowflake .snowflake-small-path {
-  stroke: #0b2265;
+  stroke: #5a145d;
 }
 
 /* BOTTOM RIGHT */
@@ -266,12 +266,12 @@ ellipse {
 
 #right-bottom-snowflake .snowflake-path,
 #right-bottom-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #right-bottom-snowflake .snowflake-medium-path,
 #right-bottom-snowflake .snowflake-small-path {
-  stroke: #0b2265;
+  stroke: #5a145d;
 }
 
 /* BOTTOM LEFT */
@@ -284,12 +284,12 @@ ellipse {
 
 #left-bottom-snowflake .snowflake-path,
 #left-bottom-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #left-bottom-snowflake .snowflake-medium-path,
 #left-bottom-snowflake .snowflake-small-path {
-  stroke: #0b2265;
+  stroke: #5a145d;
 }
 
 /* LEFT MIDDLE */
@@ -304,12 +304,12 @@ ellipse {
 
 #left-middle-snowflake .snowflake-path,
 #left-middle-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #left-middle-snowflake .snowflake-medium-path,
 #left-middle-snowflake .snowflake-small-path {
-  stroke: #0b2265;
+  stroke: #5a145d;
 }
 
 /* BOTTOM MIDDLE */
@@ -321,12 +321,12 @@ ellipse {
 
 #bottom-middle-snowflake .snowflake-path,
 #bottom-middle-snowflake ellipse {
-  fill: #0b2265;
+  fill: #5a145d;
 }
 
 #bottom-middle-snowflake .snowflake-medium-path,
 #bottom-middle-snowflake .snowflake-small-path {
-  stroke: #0b2265;
+  stroke: #5a145d;
 }
 
 .light {
