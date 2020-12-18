@@ -24,18 +24,18 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: rgb(95,214,250);
+  /* background: rgb(95,214,250);
   background: -moz-radial-gradient(circle, rgba(95,214,250,1) 0%, #5a145d 73%);
   background: -webkit-radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 73%);
   background: radial-gradient(circle, rgba(95,214,250,1) 0%, rgba(90,20,93,1) 73%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#5a145d", GradientType=1); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#5a145d", GradientType=1);  */
 
 
-  /* background: rgb(95,214,250);
+  background: rgb(95,214,250);
   background: -moz-radial-gradient(circle, #6654dd 0%,#5a145d 80%);
   background: -webkit-radial-gradient(circle, #6654dd 0%,#5a145d 80%);
   background: radial-gradient(circle, #6654dd 0%,#5a145d 80%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#5a145d", GradientType=1);  */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fd6fa",endColorstr="#5a145d", GradientType=1); 
   overflow: hidden;
 }
 
