@@ -74,6 +74,7 @@ loadParticles('particles-js-white', 'fff');
 
 function draw() {
   let pathArr = document.querySelectorAll('#anaplan path');
+  console.log(pathArr)
 
   for (let i = 0; i < pathArr.length - 3; i += 1) {
     setLineStyle(pathArr[i], i);
@@ -84,9 +85,9 @@ function draw() {
     pathArr[i].style.animationDelay = '4s'
   }
 
-  setTimeout(() => {
-    drawLines();
-  }, 5000)
+  // setTimeout(() => {
+  //   drawLines();
+  // }, 5000)
 }
 
 function drawLines() {
@@ -99,7 +100,7 @@ function drawLines() {
 
 function setLineStyle(element, i) {
   setTimeout(() => {
-    element.style.stroke = '#20254B';
+    element.style.stroke = '#0b2265';
     element.style.strokeWidth = '2px';
     element.style.strokeDasharray = element.getTotalLength() + 'px';
     element.style.strokeDashoffset = element.getTotalLength() + 'px';
@@ -108,4 +109,3 @@ function setLineStyle(element, i) {
 }
 
 draw();
-
