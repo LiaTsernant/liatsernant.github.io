@@ -386,3 +386,9 @@ ellipse {
     fill-opacity: 1;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    transform: scale(0.4);
+  }
+}
