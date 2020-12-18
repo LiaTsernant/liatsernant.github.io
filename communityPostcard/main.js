@@ -18,7 +18,7 @@ function loadParticles(elIdx, color) {
           color: '#ff0000'
         },
         polygon: {
-          nb_sides: 5
+          nb_sides: 6
         },
         image: {
           src: '',
@@ -57,7 +57,7 @@ function loadParticles(elIdx, color) {
         enable: true,
         speed: 1,
         direction: 'bottom',
-        random: false,
+        random: true,
         straight: false,
         out_mode: 'out',
         bounce: false,
